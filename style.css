@@ -1,0 +1,92 @@
+@import url('https://fonts.cdnfonts.com/css/norse');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* Left and right content width */
+  --left-content-width: 40vw;
+  --right-content-width: calc(100vw - var(--left-content-width));
+  
+  /* Logo dimensions */
+  --logo-container-height: 150px;
+  --logo-title-size: calc(var(--logo-container-height) * 0.75);
+  
+  /* Right content sections height */
+  --first-section-height: 35%;
+  --first-section-color: rgb(247, 247, 247);
+  --second-section-height: calc(100% - 2*var(--first-section-height));
+}
+
+body {
+  display: flex;
+  height: 100vh;
+}
+
+#left-content {
+  width: var(--left-content-width);
+  background-image: url(./img/background.avif);
+  background-size: cover;
+}
+
+#right-content {
+  width: var(--right-content-width);
+  display: flex;
+  flex-direction: column;
+}
+
+#logo-container { 
+  margin-top: 20%;
+  height: var(--logo-container-height);
+  background-color: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#logo-title {
+  color: white;
+  font-size: var(--logo-title-size);
+  font-family: 'norse';
+}
+
+#logo {
+  height: 95%;
+}
+
+#background-credits > a {
+  color: white;
+}
+
+#background-credits {
+  color: white;
+}
+
+section:nth-child(1) {
+  height: var(--first-section-height);
+  padding-top: 150px;
+  padding-left: 50px;
+  padding-right: 300px;
+  font-weight: 500;
+  font-size: large;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: var(--first-section-color);
+}
+
+section:nth-child(2) {
+  height: var(--second-section-height);
+}
+
+section:nth-child(3) {
+  height: var(--first-section-height);
+  background-color: var(--first-section-color);
+}
+
+section:nth-child(3) a {
+  color: green;
+}
