@@ -141,6 +141,7 @@ input {
   border-color: #E5E7EB;
   height: 3vh;
   border-radius: 5px;
+  box-shadow: none;
 }
 
 .couple {
